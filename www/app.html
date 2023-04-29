@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+     <link rel="stylesheet" href="css/style.css">
+  
+    <script src="components/loader.js"></script>
+      <title>Vibração do Celular</title>
+   
+</head>
+<body>
+	<br />
+<html>
+
+<body>
+	<h1>Vibração do Celular</h1>
+
+	<form onsubmit="startTimer(event)">
+		<label for="seconds">Digite o tempo em segundos:</label>
+		<input type="number" id="seconds" name="seconds" placeholder="Tempo em segundos" required>
+		<input type="submit" value="Iniciar">
+	</form>
+
+	<div id="timer"></div>
+
+	<script>
+		function startTimer(event) {
+			event.preventDefault();
+			var seconds = document.getElementById("seconds").value;
+			var timer = document.getElementById("timer");
+
+			timer.innerHTML = seconds;
+
+			var interval = setInterval(function() {
+				seconds--;
+				timer.innerHTML = seconds;
+
+				if (seconds === 0) {
+					navigator.vibrate(1000);
+					clearInterval(interval);
+				}
+			}, 1000);
+		}
+	</script>
+</body>
+</html>
+</body>
+</html>
