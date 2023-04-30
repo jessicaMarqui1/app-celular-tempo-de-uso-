@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	color: #333;
+}
+
+img {
+	max-width: 373px;
+	height: 200px;
+}
+
+h2 {
+	font-size: 24px;
+	margin: 20px;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0 20px 20px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+
+p + p {
+	margin-top: 20px;
+}
+
+
+p a {
+	color: #4b8bff;
+	text-decoration: none;
+	border-bottom: 2px solid #4b8bff;
+	transition: border-bottom 0.2s ease-in-out;
+}
+
+/* Estilo para links quando hover */
+p a:hover {
+	border-bottom: 2px solid #333;
+	color: #333;
+}
+ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  background-color: #333; 
+}
+
+li {
+  display: inline-block; 
+}
+
+a {
+  display: block;
+  padding: 10px;
+  color: #fff; 
+  text-decoration: none; }
+
+a:hover {
+  background-color: #555; 
+}
