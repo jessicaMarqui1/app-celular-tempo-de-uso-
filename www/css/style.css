@@ -1,4 +1,4 @@
-/* Estilos gerais */
+
 * {
   margin: 0;
   padding: 0;
@@ -57,7 +57,7 @@ input[type="submit"]:hover {
   color: #007bff;
 }
 
-/* Estilos do header */
+
 header {
   background-color: #007bff;
   color: #fff;
@@ -92,23 +92,22 @@ button {
   display: none;
 }
 ul {
-  list-style-type: none; /* Removes the default bullet points */
+  list-style-type: none; 
   margin: 0;
   padding: 0;
-  background-color: #333; /* Sets the background color of the menu */
+  background-color: #333; /
 }
 
 li {
-  display: inline-block; /* Displays the list items in a horizontal line */
+  display: inline-block; 
 }
 
 a {
   display: block;
   padding: 10px;
-  color: #fff; /* Sets the color of the text in the menu */
-  text-decoration: none; /* Removes the underline from the links */
-}
+  color: #fff; 
+  text-decoration: none; }
 
 a:hover {
-  background-color: #555; /* Sets the background color of the link when hovered over */
+  background-color: #555; 
 }
