@@ -1,55 +1,92 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Contagem Regressiva</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="css/style.css">
+	<title>Contagem Regressiva</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+	
+
 </head>
 <body>
-     <ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="sobre.html">Sobre o app</a></li>
+ <ul>
+  <li><a href="app.html">Home</a></li>
+  <li><a href="sobre.html">Sobre app</a></li>
   <li><a href="passo.html">Passo a passo</a></li>
   <li><a href="equipe.html">Equipe</a></li>
 </ul>
-<h1>Contagem Regressiva</h1>
+	<h1>Contagem Regressiva</h1>
 
-<form onsubmit="startTimer(event)">
-<label for="minutes">Digite o tempo de uso:</label>
-<input type="number" id="minutes" name="minutes" placeholder="minutos" required>
-<input type="number" id="seconds" name="seconds" placeholder="segundos" required>
-<input type="submit" value="Iniciar">
-</form>
 
-<div id="timer"></div>
+	<form onsubmit="startTimer(event)">
 
-<script>
-function startTimer(event) {
-event.preventDefault();
-var minutes = document.getElementById("minutes").value;
-var seconds = document.getElementById("seconds").value;
-var totalSeconds = parseInt(minutes) * 60 + parseInt(seconds);
-var timer = document.getElementById("timer");
+		<label for="minutes">Digite o tempo de uso:</label>
 
-timer.innerHTML = formatTime(totalSeconds);
+		<input type="number" id="minutes" name="minutes" placeholder="minutos" required>
 
-var interval = setInterval(function() {
-totalSeconds--;
-timer.innerHTML = formatTime(totalSeconds);
+		<input type="number" id="seconds" name="seconds" placeholder="segundos" required>
 
-if (totalSeconds == 0) {
-navigator.vibrate([226, 580,207,179,125,43,128,345,138,470,132,221,105]);
-clearInterval(interval);
-}
-}, 1000);
-}
+		<input type="submit" value="Iniciar">
 
-function formatTime(totalSeconds) {
-var minutes = Math.floor(totalSeconds / 60);
-var seconds = totalSeconds % 60;
-return (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
-}
-</script>
+	</form>
+	<div id="timer"></div>
+
+
+	<script>
+
+		function startTimer(event) {
+
+			event.preventDefault();
+
+			var minutes = document.getElementById("minutes").value;
+
+			var seconds = document.getElementById("seconds").value;
+
+			var totalSeconds = parseInt(minutes) * 60 + parseInt(seconds);
+
+			var timer = document.getElementById("timer");
+
+
+			timer.innerHTML = formatTime(totalSeconds);
+
+
+			var interval = setInterval(function() {
+
+				totalSeconds--;
+
+				timer.innerHTML = formatTime(totalSeconds);
+
+
+				if (totalSeconds == 0) {
+
+					navigator.vibrate([226, 580,207,179,125,43,128,345,138,470,132,221,105]);
+
+					clearInterval(interval);
+
+				}
+
+			}, 1000);
+
+		}
+
+
+		function formatTime(totalSeconds) {
+
+			var minutes = Math.floor(totalSeconds / 60);
+
+			var seconds = totalSeconds % 60;
+
+			return (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+
+		}
+
+	</script>
+
 </body>
+
 </html>
+
+
+
+

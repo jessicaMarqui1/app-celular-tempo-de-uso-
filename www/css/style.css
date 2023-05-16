@@ -1,76 +1,100 @@
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	color: #333;
 }
 
+img {
+	max-width: 373px;
+	height: 200px;
+}
+
+h2 {
+	font-size: 24px;
+	margin: 20px;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0 20px 20px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+
+p + p {
+	margin-top: 20px;
+}
+
+
+p a {
+	color: #4b8bff;
+	text-decoration: none;
+	border-bottom: 2px solid #4b8bff;
+	transition: border-bottom 0.2s ease-in-out;
+}
+
+/* Estilo para links quando hover */
+p a:hover {
+	border-bottom: 2px solid #333;
+	color: #333;
+}
 ul {
-  list-style: none;
+  list-style-type: none; 
   margin: 0;
   padding: 0;
-  background-color: #333;
-  overflow: hidden;
+  background-color: #333; 
 }
 
 li {
-  float: left;
+  display: inline-block; 
 }
 
-li a {
-  font-size: 14px;
+a {
   display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  padding: 10px;
+  color: #fff; 
+  text-decoration: none; }
+
+a:hover {
+  background-color: #555; 
 }
 
-li a:hover {
-  background-color: #111;
-}
+ body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
 
 h1 {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 36px;
-}
-
-form {
-  text-align: center;
-  margin-top: 50px;
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-input[type="number"] {
-  width: 75px;
-  padding: 7px;
-  margin-right: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-#timer {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 48px;
-}
+        margin-top: 20px;
+    }
+    
+    form {
+        margin-top: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input[type="number"] {
+        width: 100px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    
+    input[type="submit"] {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #timer {
+        font-size: 40px;
+        margin-top: 20px;
+    }
