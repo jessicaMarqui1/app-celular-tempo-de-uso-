@@ -1,21 +1,49 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Definições de estilo para o corpo do documento */
 body {
   font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Definições de estilo para a barra de navegação */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  font-size: 14px;
+  display: block;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
+li a:hover {
+  background-color: #111;
+}
+
+/* Definições de estilo para o cabeçalho da página */
 h1 {
-  margin-top: 50px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 36px;
 }
 
+/* Definições de estilo para o formulário */
 form {
-  margin-top: 30px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 label {
@@ -24,90 +52,29 @@ label {
 }
 
 input[type="number"] {
-  padding: 10px;
-  border: none;
+  width: 75px;
+  padding: 7px;
+  margin-right: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  font-size: 16px;
-  width: 80%;
-  max-width: 300px;
-  margin: 0 auto;
+  border: 1px solid #ccc;
 }
 
 input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 input[type="submit"]:hover {
-  background-color: #0062cc;
+  background-color: #3e8e41;
 }
 
+/* Definições de estilo para o temporizador */
 #timer {
-  font-size: 60px;
+  text-align: center;
   margin-top: 50px;
-  font-weight: bold;
-  color: #007bff;
-}
-
-
-header {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  display: none;
-}
-ul {
-  list-style-type: none; 
-  margin: 0;
-  padding: 0;
-  background-color: #333; 
-}
-
-li {
-  display: inline-block; 
-}
-
-a {
-  display: block;
-  padding: 10px;
-  color: #fff; 
-  text-decoration: none; }
-
-a:hover {
-  background-color: #555; 
+  font-size: 48px;
 }

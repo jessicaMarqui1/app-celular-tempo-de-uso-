@@ -1,49 +1,55 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-     <link rel="stylesheet" href="css/style.css">
-     <script src="js/menu.js"></script>
-    <title>Vibração do Celular</title>  
+<title>Contagem Regressiva</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
- <ul>
+     <ul>
   <li><a href="#">Home</a></li>
   <li><a href="sobre.html">Sobre o app</a></li>
   <li><a href="passo.html">Passo a passo</a></li>
   <li><a href="equipe.html">Equipe</a></li>
 </ul>
+<h1>Contagem Regressiva</h1>
 
-  <h1>Vibração do Celular</h1>
+<form onsubmit="startTimer(event)">
+<label for="minutes">Digite o tempo de uso:</label>
+<input type="number" id="minutes" name="minutes" placeholder="minutos" required>
+<input type="number" id="seconds" name="seconds" placeholder="segundos" required>
+<input type="submit" value="Iniciar">
+</form>
 
-  <form onsubmit="startTimer(event)">
-    <label for="seconds">Digite o tempo em segundos:</label>
-    <input type="number" id="seconds" name="seconds" placeholder="Tempo em segundos" required>
-    <input type="submit" value="Iniciar">
-  </form>
+<div id="timer"></div>
 
-  <div id="timer"></div>
+<script>
+function startTimer(event) {
+event.preventDefault();
+var minutes = document.getElementById("minutes").value;
+var seconds = document.getElementById("seconds").value;
+var totalSeconds = parseInt(minutes) * 60 + parseInt(seconds);
+var timer = document.getElementById("timer");
 
-  <script>
-    function startTimer(event) {
-      event.preventDefault();
-      var seconds = document.getElementById("seconds").value;
-      var timer = document.getElementById("timer");
+timer.innerHTML = formatTime(totalSeconds);
 
-      timer.innerHTML = seconds;
+var interval = setInterval(function() {
+totalSeconds--;
+timer.innerHTML = formatTime(totalSeconds);
 
-      var interval = setInterval(function() {
-        seconds--;
-        timer.innerHTML = seconds;
+if (totalSeconds == 0) {
+navigator.vibrate([226, 580,207,179,125,43,128,345,138,470,132,221,105]);
+clearInterval(interval);
+}
+}, 1000);
+}
 
-        if (seconds === 0) {
-          navigator.vibrate(1000);
-          clearInterval(interval);
-        }
-      }, 1000);
-    }
-  </script>
+function formatTime(totalSeconds) {
+var minutes = Math.floor(totalSeconds / 60);
+var seconds = totalSeconds % 60;
+return (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+}
+</script>
 </body>
 </html>
