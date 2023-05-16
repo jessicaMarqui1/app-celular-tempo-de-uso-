@@ -1,4 +1,4 @@
-/* Definições de estilo para o corpo do documento */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f7f7;
@@ -7,7 +7,6 @@ body {
   padding: 0;
 }
 
-/* Definições de estilo para a barra de navegação */
 ul {
   list-style: none;
   margin: 0;
@@ -33,14 +32,12 @@ li a:hover {
   background-color: #111;
 }
 
-/* Definições de estilo para o cabeçalho da página */
 h1 {
   text-align: center;
   margin-top: 10px;
   font-size: 36px;
 }
 
-/* Definições de estilo para o formulário */
 form {
   text-align: center;
   margin-top: 50px;
@@ -72,7 +69,6 @@ input[type="submit"]:hover {
   background-color: #3e8e41;
 }
 
-/* Definições de estilo para o temporizador */
 #timer {
   text-align: center;
   margin-top: 50px;
